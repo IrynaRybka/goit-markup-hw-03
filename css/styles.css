@@ -24,7 +24,23 @@ body {
     letter-spacing: 0.03em;
     background-color: var(--hover-txt-btn);
     color: var(--txt-gray-color);
-    
+}
+h1,
+h2,
+h3,
+h4,
+h5,
+h6,
+p {
+    margin: 0;
+}
+img {
+    display: block;
+    max-width: 100%;
+    height: auto;
+}
+address {
+    font-style: normal;
 }
 .container {
     width: 1200px;
@@ -33,7 +49,18 @@ body {
     padding-left: 15px;
     padding-right: 15px;
 }
-
+.section { 
+    padding-top: 94px;
+    padding-bottom: 94px;
+}
+.list {
+    list-style: none;
+    margin: 0;
+    padding: 0;
+}
+.link {
+    text-decoration: none;
+}
 .site-top {
     border-bottom: 1px solid var(--border-line-header);
     /* border-top:1px solid var(--border-line-header); */
@@ -48,21 +75,13 @@ body {
     font-weight: 700;
     font-size: 26px;
     line-height: 1.19;
-    text-decoration: none;   
+      
 }
 .half-logo-top {
     color:var(--txt-darkgray-color);
 }
-/* .logo-top { 
-    display: block;
-     margin-right: 93px;
-}*/
+
 /* навигация в хэдэр */
-.list {
-    list-style: none;
-    margin: 0;
-    padding: 0;
-}
 
 .site-nav,
 .site-contact,
@@ -100,7 +119,6 @@ body {
 .studio, 
 .portfolio, 
 .contacts {
-    text-decoration: none;
     font-weight: 500;
     /* три элемента исправить */
     color: var(--txt-darkgray-color);
@@ -125,7 +143,6 @@ body {
 /* список контакты и email */
 .email,
 .tel {
-    text-decoration: none;
     color:var(--txt-gray-color);
     font-weight: 500;
     font-size: 14px;
@@ -155,7 +172,6 @@ body {
 }
 .btn {
     background-color: var(--bk-cl-btn);
-    box-shadow: 0px 3px 1px rgba(0, 0, 0, 0.1), 0px 1px 2px rgba(0, 0, 0, 0.08), 0px 2px 2px rgba(0, 0, 0, 0.12);
     border-radius: 4px;
     border: none;
     color: var(--txt-darkgray-color);
@@ -171,6 +187,7 @@ body {
 .btn:focus {
     background-color: var(--base-blue-color);
     color: var(--hover-txt-btn);
+    box-shadow: 0px 3px 1px rgba(0, 0, 0, 0.1), 0px 1px 2px rgba(0, 0, 0, 0.08), 0px 2px 2px rgba(0, 0, 0, 0.12);
 }
 .btn.oll {
     min-width: 73px;
@@ -203,11 +220,12 @@ body {
     margin-bottom: 4px;
 }
 .progect {
-    background-color: var(--hover-txt-btn);
+    /* background-color: var(--hover-txt-btn);
     border: 1px solid var(--pr-br-cl);
-    cursor: pointer;
+    cursor: pointer; */
     margin-bottom: 30px;
-    padding-bottom: 20px;
+    margin-left: 30px;
+    width: 370px;
 }
 .progect:hover {
     box-shadow: 0px 1px 1px rgba(0, 0, 0, 0.12), 0px 4px 4px rgba(0, 0, 0, 0.06), 1px 4px 6px rgba(0, 0, 0, 0.16);
@@ -217,20 +235,15 @@ body {
 .progect:nth-last-child(-n + 3) {
     margin-bottom: 0; 
 }
-.progect {
-    margin-left: 30px;
-    width: 370px;
-}
+
 .progect:nth-child(3n + 1) {
     margin-left: 0; 
 }
 .container-list {
-    margin-left: 24px;
-    margin-right: 24px;
-}
-.progect-picture {
-    display: inline-block;
-    margin-bottom: 20px;
+    padding: 20px 24px;
+    border: solid 1px var(--pr-br-cl);
+    border-top: none;
+    
 }
 .description {
     line-height: 1.88;
@@ -255,10 +268,9 @@ body {
     color: var(--hover-txt-btn);
 }
 
-.navigation-bottom {
-    font-style:normal;
-    
-}
+/* .navigation-bottom {
+    font-style:normal; 
+}*/
 .list.bottom li {
     margin-bottom: 9px;
 }
@@ -317,7 +329,9 @@ body {
     color:var(--hover-txt-btn);
     background-color: var(--base-blue-color);
     box-shadow: 0px 4px 4px rgba(0, 0, 0, 0.15);
+
     border-radius: 4px;
+    border: none;
     padding: 10px 32px;
     min-width: 200px;
     cursor: pointer;
@@ -341,10 +355,7 @@ body {
     clip: rect(0 0 0 0);
     overflow: hidden;
   }
-.section { 
-    padding-top: 94px;
-    padding-bottom: 94px;
-}
+
 .section:nth-child(2) {
     padding-bottom: 0;
 }
@@ -391,7 +402,7 @@ body {
 }
 .we-doing-picture {
     cursor: pointer;
-    display: block;
+    
 }
 .we-doing-picture:hover {
     filter: drop-shadow(0px 4px 4px rgba(0, 0, 0, 0.25));
@@ -418,6 +429,11 @@ body {
     margin-left: 30px;
 
 }
+.container-team {
+    padding-top: 30px;
+    padding-bottom: 30px;
+
+}
 .name-our-team {
     font-weight: 500;
     font-size: 16px;
@@ -437,16 +453,9 @@ body {
 }
 .our-team-block {
     background: var(--hover-txt-btn);
-/* material shadow v1 */
-
-box-shadow: 0px 1px 3px rgba(0, 0, 0, 0.12), 0px 1px 1px rgba(0, 0, 0, 0.14), 0px 2px 1px rgba(0, 0, 0, 0.2);
-border-radius: 0px 0px 4px 4px;
-padding-bottom: 30px;
-text-align: center;
-}
-.our-team-picture {
-    display: inline-block;
-    margin-bottom: 30px;
+    box-shadow: 0px 1px 3px rgba(0, 0, 0, 0.12), 0px 1px 1px rgba(0, 0, 0, 0.14), 0px 2px 1px rgba(0, 0, 0, 0.2);
+    border-radius: 0px 0px 4px 4px;
+    text-align: center;
 }
 .demianenko {
     background: url(4853.jpg);
